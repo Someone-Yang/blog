@@ -17,7 +17,7 @@
   <meta name="description" content="yang某人用于分享经验或是吐槽的博客">
   <meta name="author" content="Someone-Yang">
   <meta name="keywords" content="">
-  <title>Gitalk那些坑 - yang某人的博客</title>
+  <title>从零开始搭建Hexo博客：准备 - yang某人的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -140,8 +140,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-06-07 10:34">
-      2020年6月7日 上午
+    <time datetime="2020-06-07 13:43">
+      2020年6月7日 下午
     </time>
   </div>
 
@@ -151,7 +151,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      763 字
+      483 字
     </span>
   
 
@@ -161,7 +161,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8
+      5
        分钟
     </span>
   
@@ -192,73 +192,34 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <blockquote>
-<p>啊！它又出错了！</p>
+              <p><strong>本文所用计算机系统：</strong>Windows 7 x86<br><strong>服务端：</strong>Github Pages</p>
+<h1 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h1><h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>Git 是一个开源的分布式版本控制系统,用于敏捷高效地处理任何或小或大的项目。因为我们要选择Github Pages作为服务端，并且Hexo部分资源需要从Github拉取，所以我们需要安装Git。<br>前往<a href="https://git-scm.com/" target="_blank" rel="noopener">Git主页</a>，点击一旁的“Download”，选择对应的版本并开始下载。<br><img src="https://s1.ax1x.com/2020/06/07/t2k0Pg.jpg" srcset="/img/loading.gif" alt="下载提示">  </p>
+<blockquote>
+<p>你能在图片所指的位置找到下载按钮。</p>
 </blockquote>
-<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>前几天，我和<a href="https://sinangentoo.github.io/" target="_blank" rel="noopener">司南大佬</a>共同研究了一下近期流行的评论系统——Gitalk。<br>我们在进行设置时，都遇到了很多问题。那么我就在此为大家列举出来，让更少人踩坑~</p>
-<h1 id="设置参数"><a href="#设置参数" class="headerlink" title="设置参数"></a>设置参数</h1><h2 id="clientID"><a href="#clientID" class="headerlink" title="clientID"></a>clientID</h2><p><strong>官方解释：</strong>GitHub Application Client ID<br><strong>我的理解：</strong>Github应用接口ID<br><strong>要填什么：</strong>你申请的Github应用的接口ID<br><strong>填写示例：</strong><code>&#39;59a7c**********f0164&#39;</code>（要带引号！）<br><strong>坑：</strong></p>
-<ul>
-<li>别把应用ID当接口ID了</li>
-<li>要带引号</li>
-</ul>
-<h2 id="clientSecret"><a href="#clientSecret" class="headerlink" title="clientSecret"></a>clientSecret</h2><p><strong>官方解释：</strong>GitHub Application Client Secret<br><strong>我的理解：</strong>Github应用接口密钥<br><strong>要填什么：</strong>你申请的Github应用的接口对应的密钥<br><strong>填写示例：</strong><code>&#39;7ba8**********************c57814&#39;</code>（要带引号！）<br><strong>坑：</strong></p>
-<ul>
-<li>要带引号（这很重要XD）</li>
-</ul>
-<h2 id="repo"><a href="#repo" class="headerlink" title="repo"></a>repo</h2><p><strong>官方解释：</strong>The repo to store comments<br><strong>我的理解：</strong>存放评论的仓库<br><strong>要填什么：</strong>你用于存放评论的仓库名<br><strong>填写示例：</strong><code>&#39;SinanGentooBlogGitalk&#39;</code><br><strong>坑：</strong></p>
-<ul>
-<li>要带引号</li>
-<li>只需要填写仓库名，不能填写仓库路径</li>
-<li>要区分大小写<del>（可能）</del></li>
-</ul>
-<h2 id="owner"><a href="#owner" class="headerlink" title="owner"></a>owner</h2><p><strong>官方解释：</strong>GitHub repository owner<br><strong>我的理解：</strong>存放评论的仓库的所有者<br><strong>要填什么：</strong><del>请康理解</del><br><strong>填写示例：</strong><code>&#39;SinanGentoo&#39;</code><br><strong>坑：</strong></p>
-<ul>
-<li>要带引号</li>
-<li>只需要填写用户名/id，不能填写用户主页</li>
-<li>要区分大小写<del>（可能）</del></li>
-</ul>
-<h2 id="admin"><a href="#admin" class="headerlink" title="admin"></a>admin</h2><p><strong>官方解释：</strong>GitHub repo owner and collaborators<br><strong>我的理解：</strong>评论管理者<br><strong>要填什么：</strong>能管理评论的用户，用于开启评论<br><strong>填写示例：</strong><code>[&#39;CHRiceRice&#39;, &#39;Someone-Yang&#39;]</code><br><strong>坑：</strong></p>
-<ul>
-<li>要带引号和大括号</li>
-<li>大括号外不要引号</li>
-<li>各个管理者名称之间用英文逗号分隔</li>
-<li>只需要填写用户名/id，不能填写用户主页</li>
-<li>要区分大小写<del>（可能）</del></li>
-</ul>
-<h2 id="id"><a href="#id" class="headerlink" title="id"></a>id</h2><p><strong>官方解释：</strong>The unique id of the page<br><strong>我的理解：</strong>评论标签<br><strong>要填什么：</strong>一般来说，这里填写<code>location.pathname</code>就可以了。<br><strong>填写示例：</strong><code>&#39;mainpagetalk&#39;</code><br><strong>坑：</strong></p>
-<ul>
-<li>如果是自定义的id，要带引号</li>
-<li><strong>[重要]</strong>长度要小于50个字符</li>
-</ul>
-<h2 id="其他设置"><a href="#其他设置" class="headerlink" title="其他设置"></a>其他设置</h2><p>其他设置项都是可选的，具体请参见<a href="https://github.com/gitalk/gitalk" target="_blank" rel="noopener">Gitalk官方仓库</a>。</p>
-<h2 id="还有！"><a href="#还有！" class="headerlink" title="还有！"></a>还有！</h2><p>除最后一项外每个设置项末尾记得打逗号（众人：这是常识吧XD）</p>
-<h2 id="DAY网站的示例"><a href="#DAY网站的示例" class="headerlink" title="DAY网站的示例"></a>DAY网站的示例</h2><pre><code class="hljs less"><span class="hljs-selector-tag">new</span> <span class="hljs-selector-tag">Gitalk</span>(&#123;
-          <span class="hljs-attribute">clientID</span>: <span class="hljs-string">'59a7c*****f0164'</span>,
-          <span class="hljs-attribute">clientSecret</span>: <span class="hljs-string">'7ba8**********c57814'</span>,
-          <span class="hljs-attribute">repo</span>: <span class="hljs-string">'DAYdiscuss'</span>,
-          <span class="hljs-attribute">owner</span>: <span class="hljs-string">'Someone-Yang'</span>,
-          <span class="hljs-attribute">admin</span>: [<span class="hljs-string">'CHRiceRice'</span>, <span class="hljs-string">'Someone-Yang'</span>],
-          <span class="hljs-attribute">id</span>: location.pathname,
-          <span class="hljs-attribute">distractionFreeMode</span>: false
-        &#125;);</code></pre>
-
-<h1 id="各种错误"><a href="#各种错误" class="headerlink" title="各种错误"></a>各种错误</h1><h2 id="Error-Not-Found"><a href="#Error-Not-Found" class="headerlink" title="Error: Not Found"></a>Error: Not Found</h2><p><strong>问题:</strong>未找到指定资源（仓库）<br><strong>建议解决办法：</strong></p>
-<ul>
-<li>检查repo和owner设置，repo必须属于owner且可以访问“问题”。</li>
-<li>检查应用接口和密钥。</li>
-</ul>
-<h2 id="Error-Network-Error"><a href="#Error-Network-Error" class="headerlink" title="Error: Network Error"></a>Error: Network Error</h2><p><strong>问题:</strong>网络错误<br><strong>建议解决办法：</strong></p>
-<ul>
-<li>开发者调试看报的什么错。</li>
-<li>检查应用接口和密钥。</li>
-<li>如果被拒绝访问，可能是接口被频繁访问而锁定，等待片刻就自动恢复。</li>
-</ul>
-<h2 id="Error-Validation-Failed"><a href="#Error-Validation-Failed" class="headerlink" title="Error: Validation Failed"></a>Error: Validation Failed</h2><p><strong>问题:</strong>验证失败<br><strong>建议解决办法：</strong></p>
-<ul>
-<li>检查应用Callback。</li>
-<li>使用md5处理标签信息。标签不能大于50字符。</li>
-</ul>
-<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><p>其他问题应该不常见了<del>（没肝写了）</del>，请参考<a href="https://github.com/gitalk/gitalk/issues" target="_blank" rel="noopener">Gitalk Issues</a>。</p>
+<p>下载完成后，启动安装程序，等待Git安装完成；或解压Git压缩包到任意目录。</p>
+<h2 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h2><blockquote>
+<p>（使用安装程序安装可跳过此步）</p>
+</blockquote>
+<p>打开<em>控制面板</em>，找到<em>高级系统设置——环境变量</em>，在用户或系统<em>PATH</em>后加上你的Git所在目录和“\usr\bin”目录（后面会用到），举个例子：<br>Git目录为<code>D:\Git</code>，则在PATH添加：<code>D:\Git;</code>和<code>D:\Git\usr\bin;</code>（记得分号）</p>
+<h2 id="检查Git"><a href="#检查Git" class="headerlink" title="检查Git"></a>检查Git</h2><p>调出cmd，输入<code>git --version</code>检查是否安装和配置正常。</p>
+<h2 id="安装NodeJS"><a href="#安装NodeJS" class="headerlink" title="安装NodeJS"></a>安装NodeJS</h2><p>Hexo需要NodeJS环境，因此需要安装并配置NodeJS。可以前往<a href="https://nodejs.org/en/" target="_blank" rel="noopener">NodeJS主页</a>下载，也可以前往<a href="https://npm.taobao.org/mirrors/node/" target="_blank" rel="noopener">阿里云镜像</a>下载。</p>
+<h2 id="配置NodeJS"><a href="#配置NodeJS" class="headerlink" title="配置NodeJS"></a>配置NodeJS</h2><blockquote>
+<p>（使用安装程序安装可跳过此步）</p>
+</blockquote>
+<p>和配置Git相同，加入环境变量即可。</p>
+<h2 id="检查NodeJS"><a href="#检查NodeJS" class="headerlink" title="检查NodeJS"></a>检查NodeJS</h2><p>调出cmd，输入<code>node -v</code>、<code>npm -v</code>检查是否安装和配置正常。</p>
+<h1 id="下载Hexo"><a href="#下载Hexo" class="headerlink" title="下载Hexo"></a>下载Hexo</h1><p>使用cmd运行：<code>npm install -g hexo-cli</code>下载完整的Hexo资源。<br><strong>建议：</strong>虽然不是必须，但建议你输入<code>npm install hexo-deployer-git --save</code>安装人见人爱的一键部署组件。</p>
+<h1 id="释放资源"><a href="#释放资源" class="headerlink" title="释放资源"></a>释放资源</h1><p>运行<code>hexo init &lt;文件夹&gt;</code>在指定位置释放文件。<br>正确生成完成后，文件夹结构如下：</p>
+<pre><code class="hljs sqf">.
+├── <span class="hljs-variable">_config</span>.yml
+├── package.json
+├── scaffolds
+├── source
+|   ├── <span class="hljs-variable">_drafts</span>
+|   └── <span class="hljs-variable">_posts</span>
+└── themes</code></pre>
+<p>至此，基本文件都已经准备好了，下一步就是准备配置博客及撰写文章了。</p>
 
             </article>
             <hr>
@@ -269,9 +230,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Github/">Github</a>
+                      <a class="hover-with-bg" href="/tags/Hexo/">Hexo</a>
                     
-                      <a class="hover-with-bg" href="/tags/Gitalk/">Gitalk</a>
+                      <a class="hover-with-bg" href="/tags/Github/">Github</a>
                     
                   </div>
                 
@@ -284,9 +245,9 @@
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2020/06/07/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%EF%BC%9A%E5%87%86%E5%A4%87/">
+                      <a href="/2020/06/07/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%EF%BC%9A%E9%85%8D%E7%BD%AE%E4%B8%8E%E6%92%B0%E5%86%99/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">从零开始搭建Hexo博客：准备</span>
+                        <span class="hidden-mobile">从零开始搭建Hexo博客：配置与撰写</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -294,8 +255,8 @@
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2020/06/07/HelloWorld/">
-                        <span class="hidden-mobile">HelloWorld</span>
+                      <a href="/2020/06/07/Gitalk%E9%82%A3%E4%BA%9B%E5%9D%91/">
+                        <span class="hidden-mobile">Gitalk那些坑</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -434,7 +395,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Gitalk那些坑&nbsp;",
+        "从零开始搭建Hexo博客：准备&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

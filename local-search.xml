@@ -4,6 +4,48 @@
   
   
   <entry>
+    <title>从零开始搭建Hexo博客：配置与撰写</title>
+    <link href="/2020/06/07/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%EF%BC%9A%E9%85%8D%E7%BD%AE%E4%B8%8E%E6%92%B0%E5%86%99/"/>
+    <url>/2020/06/07/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%EF%BC%9A%E9%85%8D%E7%BD%AE%E4%B8%8E%E6%92%B0%E5%86%99/</url>
+    
+    <content type="html"><![CDATA[<h1 id="特别文件（夹）"><a href="#特别文件（夹）" class="headerlink" title="特别文件（夹）"></a>特别文件（夹）</h1><p>在站点文件夹中，有几个文件很特别。</p><h2 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h2><p>存放网站的配置信息，可以在此配置大部分的参数。</p><h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><p>存放应用程序信息。</p><h2 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h2><p>模版 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</p><h2 id="source"><a href="#source" class="headerlink" title="source"></a>source</h2><p>资源文件夹，用于存放用户资源。</p><h2 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h2><p>主题文件夹。Hexo会根据主题来生成静态页面。</p><h1 id="配置站点"><a href="#配置站点" class="headerlink" title="配置站点"></a>配置站点</h1><p>打开_config.yml，你会看到一大堆有趣的信息。我们要做的就是修改其中的一部分。<br>参考<a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">官方文档</a>完成基本设置和主题设置。</p><h1 id="撰写新文章"><a href="#撰写新文章" class="headerlink" title="撰写新文章"></a>撰写新文章</h1><p>cmd输入<code>hexo new &quot;文章标题&quot;</code>，Hexo会自动创建模板，然后以平时的习惯写Markdown就可以力！</p><h1 id="发布博客更新"><a href="#发布博客更新" class="headerlink" title="发布博客更新"></a>发布博客更新</h1><h2 id="重-头-戏-！"><a href="#重-头-戏-！" class="headerlink" title="重 头 戏 ！"></a>重 头 戏 ！</h2><p>一个人写文章给自己看是远远不够滴！我们要把自己的知识分享给他人。<br>在上一篇博文中，我相信你已经按照建议准备好了一键部署！没安装成功也不用着急，也是有办法滴！</p><blockquote><p>P.S. 下方命令行示例皆不带<code>&lt;</code>或<code>&gt;</code>。<code>&lt;&gt;</code>之内的信息只是提示。</p></blockquote><h2 id="准备仓库"><a href="#准备仓库" class="headerlink" title="准备仓库"></a>准备仓库</h2><p>登录Github或其他Git社区（此处以Github为例），创建仓库。在Github上，你应当创建一个名为<code>&lt;你的名字&gt;.github.io</code>的仓库，比如我就是<code>Someone-Yang.github.io</code>。创建好之后，准备配置密钥。</p><h2 id="配置-Git"><a href="#配置-Git" class="headerlink" title="配置 Git"></a>配置 Git</h2><p>打开cmd或Git，输入：</p><pre><code class="hljs routeros">git<span class="hljs-built_in"> config </span>--global user.name <span class="hljs-string">"&lt;随意的名字，建议设为你自己的Github用户名&gt;"</span>git<span class="hljs-built_in"> config </span>--global user.email <span class="hljs-string">"&lt;你的Github注册邮箱&gt;"</span></code></pre><blockquote><p>注意：建议带上引号，不然可能会出大问题(bushi)</p></blockquote><h2 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h2><pre><code class="hljs xml">ssh-keygen -t rsa -C <span class="hljs-tag">&lt;<span class="hljs-name">你的Github注册邮箱</span>&gt;</span></code></pre><blockquote><p>如果提示不是有效命令，请返回上一博文检查环境变量。</p></blockquote><p>三个回车，全部默认即可。</p><h2 id="获取密钥"><a href="#获取密钥" class="headerlink" title="获取密钥"></a>获取密钥</h2><p>Windows用户，密钥一般会生成在<code>C:\user\&lt;你的名字&gt;\.ssh</code>中。打开<code>id_rsa.pub</code>，复制所有内容，并在Github上配置SSH密钥。</p><h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>运行：</p><pre><code class="hljs nginx"><span class="hljs-attribute">ssh</span> -T git<span class="hljs-variable">@github</span>.com</code></pre><p>如果出现提示，输入<code>yes</code>，看到Github返回的信息即表示成功。</p><h2 id="最后一步"><a href="#最后一步" class="headerlink" title="最后一步"></a>最后一步</h2><p>运行：</p><pre><code class="hljs properties"><span class="hljs-attr">hexo</span> <span class="hljs-string">cl</span><span class="hljs-attr">hexo</span> <span class="hljs-string">g</span><span class="hljs-attr">hexo</span> <span class="hljs-string">d</span></code></pre><p>分别是：删除原先内容、生成内容和发布内容。</p><h2 id="对于没有一键部署的用户"><a href="#对于没有一键部署的用户" class="headerlink" title="对于没有一键部署的用户"></a>对于没有一键部署的用户</h2><p>请直接使用Git拉取仓库，<code>git add .</code>后<code>git push</code>。</p><h1 id="恭喜！"><a href="#恭喜！" class="headerlink" title="恭喜！"></a>恭喜！</h1><p>至此，你已经成功像我一样拥有了一个基于Hexo的博客。访问<code>&lt;你的Github用户名&gt;.github.io</code>看看你的成功吧！</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+      <tag>Github</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>从零开始搭建Hexo博客：准备</title>
+    <link href="/2020/06/07/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%EF%BC%9A%E5%87%86%E5%A4%87/"/>
+    <url>/2020/06/07/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%EF%BC%9A%E5%87%86%E5%A4%87/</url>
+    
+    <content type="html"><![CDATA[<p><strong>本文所用计算机系统：</strong>Windows 7 x86<br><strong>服务端：</strong>Github Pages</p><h1 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h1><h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>Git 是一个开源的分布式版本控制系统,用于敏捷高效地处理任何或小或大的项目。因为我们要选择Github Pages作为服务端，并且Hexo部分资源需要从Github拉取，所以我们需要安装Git。<br>前往<a href="https://git-scm.com/" target="_blank" rel="noopener">Git主页</a>，点击一旁的“Download”，选择对应的版本并开始下载。<br><img src="https://s1.ax1x.com/2020/06/07/t2k0Pg.jpg" srcset="/img/loading.gif" alt="下载提示">  </p><blockquote><p>你能在图片所指的位置找到下载按钮。</p></blockquote><p>下载完成后，启动安装程序，等待Git安装完成；或解压Git压缩包到任意目录。</p><h2 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h2><blockquote><p>（使用安装程序安装可跳过此步）</p></blockquote><p>打开<em>控制面板</em>，找到<em>高级系统设置——环境变量</em>，在用户或系统<em>PATH</em>后加上你的Git所在目录和“\usr\bin”目录（后面会用到），举个例子：<br>Git目录为<code>D:\Git</code>，则在PATH添加：<code>D:\Git;</code>和<code>D:\Git\usr\bin;</code>（记得分号）</p><h2 id="检查Git"><a href="#检查Git" class="headerlink" title="检查Git"></a>检查Git</h2><p>调出cmd，输入<code>git --version</code>检查是否安装和配置正常。</p><h2 id="安装NodeJS"><a href="#安装NodeJS" class="headerlink" title="安装NodeJS"></a>安装NodeJS</h2><p>Hexo需要NodeJS环境，因此需要安装并配置NodeJS。可以前往<a href="https://nodejs.org/en/" target="_blank" rel="noopener">NodeJS主页</a>下载，也可以前往<a href="https://npm.taobao.org/mirrors/node/" target="_blank" rel="noopener">阿里云镜像</a>下载。</p><h2 id="配置NodeJS"><a href="#配置NodeJS" class="headerlink" title="配置NodeJS"></a>配置NodeJS</h2><blockquote><p>（使用安装程序安装可跳过此步）</p></blockquote><p>和配置Git相同，加入环境变量即可。</p><h2 id="检查NodeJS"><a href="#检查NodeJS" class="headerlink" title="检查NodeJS"></a>检查NodeJS</h2><p>调出cmd，输入<code>node -v</code>、<code>npm -v</code>检查是否安装和配置正常。</p><h1 id="下载Hexo"><a href="#下载Hexo" class="headerlink" title="下载Hexo"></a>下载Hexo</h1><p>使用cmd运行：<code>npm install -g hexo-cli</code>下载完整的Hexo资源。<br><strong>建议：</strong>虽然不是必须，但建议你输入<code>npm install hexo-deployer-git --save</code>安装人见人爱的一键部署组件。</p><h1 id="释放资源"><a href="#释放资源" class="headerlink" title="释放资源"></a>释放资源</h1><p>运行<code>hexo init &lt;文件夹&gt;</code>在指定位置释放文件。<br>正确生成完成后，文件夹结构如下：</p><pre><code class="hljs sqf">.├── <span class="hljs-variable">_config</span>.yml├── package.json├── scaffolds├── source|   ├── <span class="hljs-variable">_drafts</span>|   └── <span class="hljs-variable">_posts</span>└── themes</code></pre><p>至此，基本文件都已经准备好了，下一步就是准备配置博客及撰写文章了。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+      <tag>Github</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Gitalk那些坑</title>
     <link href="/2020/06/07/Gitalk%E9%82%A3%E4%BA%9B%E5%9D%91/"/>
     <url>/2020/06/07/Gitalk%E9%82%A3%E4%BA%9B%E5%9D%91/</url>
@@ -14,9 +56,9 @@
     
     <tags>
       
-      <tag>Gitalk</tag>
-      
       <tag>Github</tag>
+      
+      <tag>Gitalk</tag>
       
     </tags>
     
