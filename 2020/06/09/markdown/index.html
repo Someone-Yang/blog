@@ -7,23 +7,23 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.jpg">
-  <link rel="icon" type="image/png" href="/img/favicon.jpg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/img/favicon.jpg">
+  <link rel="icon" type="image/png" href="/blog/img/favicon.jpg">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="yang某人用于分享经验或是吐槽的博客">
+  <meta name="description" content="">
   <meta name="author" content="Someone-Yang">
   <meta name="keywords" content="">
-  <title>从零开始搭建Hexo博客：配置与撰写 - yang某人的博客</title>
+  <title>Markdown：轻量级标记语言 - yang某人的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+  <link  rel="stylesheet" href="/blog/lib/hint/hint.min.css" />
 
   
     <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
@@ -41,12 +41,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/blog/css/main.css" />
 
 <!-- 自定义样式保持在最底部 -->
 
 
-  <script  src="/js/utils.js" ></script>
+  <script  src="/blog/js/utils.js" ></script>
 <meta name="generator" content="Hexo 4.2.1"></head>
 
 
@@ -55,7 +55,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
-       href="/">&nbsp;<strong>yang某人的博客</strong>&nbsp;</a>
+       href="/blog/">&nbsp;<strong>yang某人的博客</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -72,7 +72,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/blog/">
                 <i class="iconfont icon-home-fill"></i>
                 首页
               </a>
@@ -84,7 +84,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/blog/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 归档
               </a>
@@ -96,7 +96,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/blog/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 分类
               </a>
@@ -108,7 +108,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/blog/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 标签
               </a>
@@ -127,7 +127,7 @@
 </nav>
 
     <div class="view intro-2" id="background" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('/blog/img/default.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -140,8 +140,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-06-07 14:28">
-      2020年6月7日 下午
+    <time datetime="2020-06-09 12:09">
+      2020年6月9日 中午
     </time>
   </div>
 
@@ -151,7 +151,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      657 字
+      352 字
     </span>
   
 
@@ -161,7 +161,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7
+      3
        分钟
     </span>
   
@@ -192,42 +192,81 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <h1 id="特别文件（夹）"><a href="#特别文件（夹）" class="headerlink" title="特别文件（夹）"></a>特别文件（夹）</h1><p>在站点文件夹中，有几个文件很特别。</p>
-<h2 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h2><p>存放网站的配置信息，可以在此配置大部分的参数。</p>
-<h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><p>存放应用程序信息。</p>
-<h2 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h2><p>模版 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</p>
-<h2 id="source"><a href="#source" class="headerlink" title="source"></a>source</h2><p>资源文件夹，用于存放用户资源。</p>
-<h2 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h2><p>主题文件夹。Hexo会根据主题来生成静态页面。</p>
-<h1 id="配置站点"><a href="#配置站点" class="headerlink" title="配置站点"></a>配置站点</h1><p>打开_config.yml，你会看到一大堆有趣的信息。我们要做的就是修改其中的一部分。<br>参考<a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">官方文档</a>完成基本设置和主题设置。</p>
-<h1 id="撰写新文章"><a href="#撰写新文章" class="headerlink" title="撰写新文章"></a>撰写新文章</h1><p>cmd输入<code>hexo new &quot;文章标题&quot;</code>，Hexo会自动创建模板，然后以平时的习惯写Markdown就可以力！</p>
-<h1 id="发布博客更新"><a href="#发布博客更新" class="headerlink" title="发布博客更新"></a>发布博客更新</h1><h2 id="重-头-戏-！"><a href="#重-头-戏-！" class="headerlink" title="重 头 戏 ！"></a>重 头 戏 ！</h2><p>一个人写文章给自己看是远远不够滴！我们要把自己的知识分享给他人。<br>在上一篇博文中，我相信你已经按照建议准备好了一键部署！没安装成功也不用着急，也是有办法滴！</p>
-<blockquote>
-<p>P.S. 下方命令行示例皆不带<code>&lt;</code>或<code>&gt;</code>。<code>&lt;&gt;</code>之内的信息只是提示。</p>
+              <p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。<br>我将在此列举Markdown常用语法，供像我一样的入门者参考。</p>
+<h1 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h1><blockquote>
+<p>一般来说，所有支持Markdown的平台都支持下列语法。</p>
 </blockquote>
-<h2 id="准备仓库"><a href="#准备仓库" class="headerlink" title="准备仓库"></a>准备仓库</h2><p>登录Github或其他Git社区（此处以Github为例），创建仓库。在Github上，你应当创建一个名为<code>&lt;你的名字&gt;.github.io</code>的仓库，比如我就是<code>Someone-Yang.github.io</code>。创建好之后，准备配置密钥。</p>
-<h2 id="配置-Git"><a href="#配置-Git" class="headerlink" title="配置 Git"></a>配置 Git</h2><p>打开cmd或Git，输入：</p>
-<pre><code class="hljs routeros">git<span class="hljs-built_in"> config </span>--global user.name <span class="hljs-string">"&lt;随意的名字，建议设为你自己的Github用户名&gt;"</span>
-git<span class="hljs-built_in"> config </span>--global user.email <span class="hljs-string">"&lt;你的Github注册邮箱&gt;"</span></code></pre>
-<blockquote>
-<p>注意：建议带上引号，不然可能会出大问题(bushi)</p>
+<h2 id="换行-最重要"><a href="#换行-最重要" class="headerlink" title="换行(最重要)"></a>换行(最重要)</h2><blockquote>
+<p>现在貌似很多人不会换行XD</p>
 </blockquote>
-<h2 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h2><pre><code class="hljs xml">ssh-keygen -t rsa -C <span class="hljs-tag">&lt;<span class="hljs-name">你的Github注册邮箱</span>&gt;</span></code></pre>
-<blockquote>
-<p>如果提示不是有效命令，请返回上一博文检查环境变量。</p>
-</blockquote>
-<p>三个回车，全部默认即可。</p>
-<h2 id="获取密钥"><a href="#获取密钥" class="headerlink" title="获取密钥"></a>获取密钥</h2><p>Windows用户，密钥一般会生成在<code>C:\user\&lt;你的名字&gt;\.ssh</code>中。打开<code>id_rsa.pub</code>，复制所有内容，并在Github上配置SSH密钥。</p>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>运行：</p>
-<pre><code class="hljs nginx"><span class="hljs-attribute">ssh</span> -T git<span class="hljs-variable">@github</span>.com</code></pre>
-<p>如果出现提示，输入<code>yes</code>，看到Github返回的信息即表示成功。</p>
-<h2 id="最后一步"><a href="#最后一步" class="headerlink" title="最后一步"></a>最后一步</h2><p>运行：</p>
-<pre><code class="hljs properties"><span class="hljs-attr">hexo</span> <span class="hljs-string">cl</span>
-<span class="hljs-attr">hexo</span> <span class="hljs-string">g</span>
-<span class="hljs-attr">hexo</span> <span class="hljs-string">d</span></code></pre>
-<p>分别是：删除原先内容、生成内容和发布内容。</p>
-<h2 id="对于没有一键部署的用户"><a href="#对于没有一键部署的用户" class="headerlink" title="对于没有一键部署的用户"></a>对于没有一键部署的用户</h2><p>请直接使用Git拉取仓库，<code>git add .</code>后<code>git push</code>。</p>
-<h1 id="恭喜！"><a href="#恭喜！" class="headerlink" title="恭喜！"></a>恭喜！</h1><p>至此，你已经成功像我一样拥有了一个基于Hexo的博客。访问<code>&lt;你的Github用户名&gt;.github.io</code>看看你的成功吧！</p>
+<p>句尾空两格或两段之间空行。</p>
+<pre><code class="hljs plain">我是第一句  
+我是第二句
 
+我是第三句</code></pre>
+<p><strong>效果：</strong><br>我是第一句<br>我是第二句</p>
+<p>我是第三句</p>
+<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><pre><code class="hljs asciidoc"><span class="hljs-strong">*斜体文本*</span></code></pre>
+
+<p><strong>效果：</strong><br><em>斜体文本</em></p>
+<h2 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h2><pre><code class="hljs asciidoc">*<span class="hljs-strong">*加粗文本*</span><span class="hljs-strong">*</span></code></pre>
+
+<p><strong>效果：</strong><br><strong>加粗文本</strong></p>
+<h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><pre><code class="hljs markdown">[<span class="hljs-string">提示文本</span>](<span class="hljs-link">链接</span>)
+[<span class="hljs-string">含悬浮提示的链接</span>](<span class="hljs-link">链接 "提示"</span>)</code></pre>
+
+<p><strong>效果：</strong><br><a href="#">提示文本</a><br><a href="#" title="提示">含悬浮提示的链接</a></p>
+<h2 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h2><pre><code class="hljs markdown">![<span class="hljs-string">占位符</span>](<span class="hljs-link">链接</span>)</code></pre>
+
+<p><strong>效果：</strong><br><img src="https://asset.mozhua.org:444/Media?name=E7469D280531B57A922F65346E703B43.png" srcset="/blog/img/loading.gif" alt="命他续"></p>
+<h2 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h2><pre><code class="hljs arcade"><span class="hljs-string">`代码`</span></code></pre>
+
+<p><strong>效果：</strong><br><code>代码</code></p>
+<h2 id="区块代码"><a href="#区块代码" class="headerlink" title="区块代码"></a>区块代码</h2><pre><code class="hljs angelscript">`(共<span class="hljs-number">3</span>个)
+代码
+`(共<span class="hljs-number">3</span>个)</code></pre>
+
+<p><strong>效果：</strong>  </p>
+<pre><code class="hljs plain">代码</code></pre>
+
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><pre><code class="hljs asciidoc"><span class="hljs-bullet">* </span>项目一
+<span class="hljs-bullet">* </span>项目二</code></pre>
+
+<p><strong>效果：</strong>  </p>
+<ul>
+<li>项目一</li>
+<li>项目二</li>
+</ul>
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><pre><code class="hljs clean"># h1
+## h2
+### h3
+#### h4
+##### h5
+###### h6</code></pre>
+
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><pre><code class="hljs markdown"><span class="hljs-quote">&gt; 内容</span></code></pre>
+
+<p><strong>效果：</strong>  </p>
+<blockquote>
+<p>内容</p>
+</blockquote>
+<h2 id="水平分割线"><a href="#水平分割线" class="headerlink" title="水平分割线"></a>水平分割线</h2><pre><code class="hljs yaml"><span class="hljs-meta">---</span></code></pre>
+
+<h1 id="高级语法"><a href="#高级语法" class="headerlink" title="高级语法"></a>高级语法</h1><blockquote>
+<p>并不是所有支持Markdown的平台都支持这些拓展语法。</p>
+</blockquote>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><pre><code class="hljs ruby"><span class="hljs-params">|表头1|</span>表头<span class="hljs-number">2</span><span class="hljs-params">|表头3|</span>
+<span class="hljs-params">|:---|</span><span class="hljs-symbol">:---</span><span class="hljs-symbol">:|---</span><span class="hljs-symbol">:|</span>
+<span class="hljs-params">|左对齐|</span>中对齐<span class="hljs-params">|右对齐|</span></code></pre>
+
+<h2 id="复选框"><a href="#复选框" class="headerlink" title="复选框"></a>复选框</h2><pre><code class="hljs asciidoc"><span class="hljs-bullet">- </span>[] 未选中
+<span class="hljs-bullet">- </span>[x] 选中</code></pre>
+
+
+<h2 id="高亮"><a href="#高亮" class="headerlink" title="高亮"></a>高亮</h2><pre><code class="hljs diff">==高亮文本<span class="hljs-comment">===</span></code></pre>
+
+<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><pre><code class="hljs markdown">原文[^1]
+[<span class="hljs-symbol">^1</span>]:<span class="hljs-link">注释</span></code></pre>
             </article>
             <hr>
             <div>
@@ -237,9 +276,7 @@ git<span class="hljs-built_in"> config </span>--global user.email <span class="h
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Hexo/">Hexo</a>
-                    
-                      <a class="hover-with-bg" href="/tags/Github/">Github</a>
+                      <a class="hover-with-bg" href="/blog/tags/Markdown/">Markdown</a>
                     
                   </div>
                 
@@ -256,8 +293,8 @@ git<span class="hljs-built_in"> config </span>--global user.email <span class="h
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2020/06/07/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%EF%BC%9A%E5%87%86%E5%A4%87/">
-                        <span class="hidden-mobile">从零开始搭建Hexo博客：准备</span>
+                      <a href="/blog/2020/06/07/setuphexo2/">
+                        <span class="hidden-mobile">从零开始搭建Hexo博客：撰写与发布</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -343,20 +380,20 @@ git<span class="hljs-built_in"> config </span>--global user.email <span class="h
 <!-- SCRIPTS -->
 <script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
 <script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
+<script  src="/blog/js/debouncer.js" ></script>
+<script  src="/blog/js/main.js" ></script>
 
 <!-- Plugins -->
 
 
   
-    <script  src="/js/lazyload.js" ></script>
+    <script  src="/blog/js/lazyload.js" ></script>
   
 
 
 
   <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
+  <script  src="/blog/js/clipboard-use.js" ></script>
 
 
 
@@ -396,7 +433,7 @@ git<span class="hljs-built_in"> config </span>--global user.email <span class="h
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "从零开始搭建Hexo博客：配置与撰写&nbsp;",
+        "Markdown：轻量级标记语言&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
@@ -428,9 +465,9 @@ git<span class="hljs-built_in"> config </span>--global user.email <span class="h
 
 
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="/blog/js/local-search.js" ></script>
   <script>
-    var path = "/local-search.xml";
+    var path = "/blog/local-search.xml";
     var inputArea = document.querySelector("#local-search-input");
     inputArea.onclick = function () {
       searchFunc(path, 'local-search-input', 'local-search-result');
@@ -459,6 +496,57 @@ git<span class="hljs-built_in"> config </span>--global user.email <span class="h
 
 
 
+
+  
+  
+    <script>
+      !function (e, t, a) {
+        function r() {
+          for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+          requestAnimationFrame(r)
+        }
+
+        function n() {
+          var t = "function" == typeof e.onclick && e.onclick;
+          e.onclick = function (e) {
+            t && t(), o(e)
+          }
+        }
+
+        function o(e) {
+          var a = t.createElement("div");
+          a.className = "heart", s.push({
+            el: a,
+            x: e.clientX - 5,
+            y: e.clientY - 5,
+            scale: 1,
+            alpha: 1,
+            color: c()
+          }), t.body.appendChild(a)
+        }
+
+        function i(e) {
+          var a = t.createElement("style");
+          a.type = "text/css";
+          try {
+            a.appendChild(t.createTextNode(e))
+          } catch (t) {
+            a.styleSheet.cssText = e
+          }
+          t.getElementsByTagName("head")[0].appendChild(a)
+        }
+
+        function c() {
+          return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+        }
+
+        var s = [];
+        e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+          setTimeout(e, 1e3 / 60)
+        }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()
+      }(window, document);
+    </script>
+  
 
 
 
