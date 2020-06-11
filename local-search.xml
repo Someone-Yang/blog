@@ -4,6 +4,29 @@
   
   
   <entry>
+    <title>主题Markdown语法</title>
+    <link href="/blog/2020/06/11/theme-markdown/"/>
+    <url>/blog/2020/06/11/theme-markdown/</url>
+    
+    <content type="html"><![CDATA[<p><del>我又来水博客啦(bushi)</del></p><h1 id="快乐的标签"><a href="#快乐的标签" class="headerlink" title="快乐的标签"></a>快乐的标签</h1><pre><code class="hljs routeros">&#123;%<span class="hljs-built_in"> note </span>success %&#125;内容&#123;% endnote %&#125;</code></pre><div class="note note-success">            <p>内容</p>          </div><p><strong>可选标签：</strong>primary、secondary、success、danger、warning、info、light</p><h1 id="快乐的勾选框"><a href="#快乐的勾选框" class="headerlink" title="快乐的勾选框"></a>快乐的勾选框</h1><pre><code class="hljs crystal"><span class="hljs-template-variable">&#123;% cb 普通示例 %&#125;</span><span class="hljs-template-variable">&#123;% cb 默认选中, <span class="hljs-literal">true</span> %&#125;</span><span class="hljs-template-variable">&#123;% cb 内联示例, <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span> %&#125;</span> 后面文字不换行<span class="hljs-template-variable">&#123;% cb <span class="hljs-literal">false</span> %&#125;</span> 也可以只传入一个参数，文字写在后边（这样不支持外联）</code></pre><div>            <input type="checkbox" disabled >普通示例          </div><div>            <input type="checkbox" disabled checked="checked">默认选中          </div>            <input type="checkbox" disabled >内联示例           后面文字不换行<input type="checkbox" disabled > 也可以只传入一个参数，文字写在后边（这样不支持外联）<h1 id="美观的按钮"><a href="#美观的按钮" class="headerlink" title="美观的按钮"></a>美观的按钮</h1><pre><code class="hljs django"><span class="hljs-template-tag">&#123;% <span class="hljs-name">btn</span> 地址, 文本, 提示信息（可选） %&#125;</span></code></pre><a class="btn" href="https://sinangentoo.github.io/"  title="你好，世界！" target="_blank">我是个按钮</a>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+      <tag>Markdown</tag>
+      
+      <tag>Fluid</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Markdown：轻量级标记语言</title>
     <link href="/blog/2020/06/09/markdown/"/>
     <url>/blog/2020/06/09/markdown/</url>
@@ -33,9 +56,9 @@
     
     <tags>
       
-      <tag>Github</tag>
-      
       <tag>Hexo</tag>
+      
+      <tag>Github</tag>
       
     </tags>
     
@@ -54,9 +77,9 @@
     
     <tags>
       
-      <tag>Github</tag>
-      
       <tag>Hexo</tag>
+      
+      <tag>Github</tag>
       
     </tags>
     
@@ -75,9 +98,9 @@
     
     <tags>
       
-      <tag>Gitalk</tag>
-      
       <tag>Github</tag>
+      
+      <tag>Gitalk</tag>
       
     </tags>
     
