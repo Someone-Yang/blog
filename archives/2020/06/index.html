@@ -87,18 +87,6 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
               <a class="nav-link" href="/blog/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 标签
@@ -148,12 +136,18 @@
                 
 
 <div class="list-group">
-  <p class="h4">共计 6 篇文章</p>
+  <p class="h4">共计 7 篇文章</p>
   <hr>
   
     
       
       <p class="h5">2020</p>
+    
+    <a href="/blog/2020/06/12/weekly-act-1/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">杨林创意工坊周活动第一期</span>
+      <span style="float: right;">06-12</span>
+    </a>
+  
     
     <a href="/blog/2020/06/11/theme-markdown/" class="list-group-item list-group-item-action">
       <span class="archive-post-title">主题Markdown语法</span>
@@ -249,6 +243,38 @@
     
 
     
+	
+	<div>
+	<span id="timeDate">载入天数...</span>
+	<span id="times">载入时分秒...</span>
+	<script>
+	var now = new Date();
+	function createtime(){
+      var grt= new Date("06/07/2020 12:01:00");
+      now.setTime(now.getTime()+250);
+      days = (now - grt ) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+      hnum = Math.floor(hours);
+      if(String(hnum).length ==1 ){
+          hnum = "0" + hnum;
+      }
+      minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+      mnum = Math.floor(minutes);
+      if(String(mnum).length ==1 ){
+                mnum = "0" + mnum;
+      }
+      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+      snum = Math.round(seconds);
+      if(String(snum).length ==1 ){
+                snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML = "本博客已运行&nbsp"+dnum+"&nbsp天";
+      document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
+	}
+	setInterval("createtime()",250);
+	</script>
+	</div>
   </div>
 </footer>
 

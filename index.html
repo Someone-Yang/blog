@@ -87,18 +87,6 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
               <a class="nav-link" href="/blog/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 标签
@@ -156,6 +144,39 @@
     
     
     <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/blog/2020/06/12/weekly-act-1/">杨林创意工坊周活动第一期</a>
+
+      <a href="/blog/2020/06/12/weekly-act-1/" class="index-excerpt">
+        
+        
+          
+        
+        <div>杨林创意工坊周活动主题：Scratch版权维护协会</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-06-12
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/blog/tags/YangLin/">YangLin</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
       <a class="index-header" href="/blog/2020/06/11/theme-markdown/">主题Markdown语法</a>
 
       <a href="/blog/2020/06/11/theme-markdown/" class="index-excerpt">
@@ -177,9 +198,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/blog/tags/Hexo/">Hexo</a>
-            
               <a href="/blog/tags/Markdown/">Markdown</a>
+            
+              <a href="/blog/tags/Hexo/">Hexo</a>
             
               <a href="/blog/tags/Fluid/">Fluid</a>
             
@@ -247,9 +268,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/blog/tags/Hexo/">Hexo</a>
-            
               <a href="/blog/tags/Github/">Github</a>
+            
+              <a href="/blog/tags/Hexo/">Hexo</a>
             
           </div>
         
@@ -282,9 +303,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/blog/tags/Hexo/">Hexo</a>
-            
               <a href="/blog/tags/Github/">Github</a>
+            
+              <a href="/blog/tags/Hexo/">Hexo</a>
             
           </div>
         
@@ -317,9 +338,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/blog/tags/Github/">Github</a>
-            
               <a href="/blog/tags/Gitalk/">Gitalk</a>
+            
+              <a href="/blog/tags/Github/">Github</a>
             
           </div>
         
@@ -419,6 +440,38 @@
     
 
     
+	
+	<div>
+	<span id="timeDate">载入天数...</span>
+	<span id="times">载入时分秒...</span>
+	<script>
+	var now = new Date();
+	function createtime(){
+      var grt= new Date("06/07/2020 12:01:00");
+      now.setTime(now.getTime()+250);
+      days = (now - grt ) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+      hnum = Math.floor(hours);
+      if(String(hnum).length ==1 ){
+          hnum = "0" + hnum;
+      }
+      minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+      mnum = Math.floor(minutes);
+      if(String(mnum).length ==1 ){
+                mnum = "0" + mnum;
+      }
+      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+      snum = Math.round(seconds);
+      if(String(snum).length ==1 ){
+                snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML = "本博客已运行&nbsp"+dnum+"&nbsp天";
+      document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
+	}
+	setInterval("createtime()",250);
+	</script>
+	</div>
   </div>
 </footer>
 
