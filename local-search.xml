@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>别针团队，前路漫漫</title>
+    <link href="/blog/2020/06/18/clipteam/"/>
+    <url>/blog/2020/06/18/clipteam/</url>
+    
+    <content type="html"><![CDATA[<h1 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h1><p>在Scratch圈经常潜水的人肯定都知道去年火了老久的Clip CC 2.0。Clip CC是Clipteam（下文或称“别针团队”）制作的二次开发版Scratch，相比原版增加了许多实用功能，便于制作者发挥创意，让制作变得更加简单。<br>笔者曾经也用过Clip CC，这确实是个非常棒的Scratch编辑器。汉化优化更平易近人，各类新模块都使人眼前一亮。而且相较其他“杂类编辑器”（无特质），Clip CC还提供了网页版，可以说是非常完美了。<br>笔者进行随机访问后，数据显示：约90%的Scratcher了解Clip CC，其中40%的Scratcher用过Clip CC。<br>Clip CC 1发布可以追溯到2018年。当时Scratch在国内尚不流行，但Clip CC仍然获得了广泛的好评。2019年，国家教育部鼓励中小学生开展计算机教育，Scratch成为首选语言。Clip CC 2瞬间流行，甚至成为各地中小学计算机教育推荐使用的软件。至此，Clip CC 2“名扬四海”，也正是计算机教育的流行，帮助了Clip CC取得极大进步。<br>笔者通过<del>爬</del>查询Github，Clip CC 3工程最早可追溯至2019年上旬，这说明Clipteam是一直在默默地制作Clip CC 3，从中不难看出别针团队的无限努力。<br>然而到了2019年下旬，Clip CC突然没了音讯。笔者曾尝试访问别针官网、四处搜寻消息，皆以失败而归。codingclip域名备案于2020年上旬也突然过期，多数Scratcher对Clip CC 3的发布感到期待而不知何时可至。</p><h1 id="转型"><a href="#转型" class="headerlink" title="转型"></a>转型</h1><p>其实，Clipteam并不是在“鸽”。别针团队多数成员在2019年下旬转战“版权维护”这个光荣的事业，成立“Scratch版权维护协会”（下文或称“版维”）。版权问题在我国Scratch社区中终于获得了重视，版维的积极行为得到了多数Scratcher的支持。但是，Clip CC 3的工程一直没了消息，仓库也没有消息。  </p><h1 id="曙光"><a href="#曙光" class="headerlink" title="曙光"></a>曙光</h1><p>笔者在6月16日在Github上发现，Clip CC 3仓库又有了新消息（虽然是以“问题”为主）。不过，别针团队也及时交流，很显然别针团对还是很关注Clip CC 3的发展的。<br>Clip CC 1&amp;2一度获得好评，3在原版基础上又增加了许多新功能。对于广大Scratcher和信息技术教师来说，Clip CC一定是首选编辑器。<br>笔者在第三方新闻频道了解到，Clipteam可能将制作一个社区。消息如下：</p><blockquote><p>Clip CC制作团队Clipteam于今年3月18日增加新的Project，内容于“别针社区”相关，可能暗示了Clipteam将为众多开发者提供一个开发社区。</p></blockquote><p>看到这个，心里的确非常激动。如果Clipteam拥有一个完善的社区和社区制度，那么我相信，别针社区一定会成为全国乃至全世界知名的Scratch社区。我一定会支持这个社区的发展。<br>至此，我衷心希望Clipteam能蓬勃发展，我也推荐您使用ClipCC。<br>I believe the clipteam will be well known around the world.<br>加油，Clipteam！<br>如果我获得了新消息，我将会及时撰写新博文。</p><h1 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h1><p><a href="https://github.com/Clipteam" target="_blank" rel="noopener">Clipteam on Github</a><br><a href="https://gitee.com/clipteam" target="_blank" rel="noopener">Clipteam on Gitee</a><br>I strongly invite you to give them a star.<br>And what’s more, thanks for your reading.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>新闻</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Clipteam</tag>
+      
+      <tag>评论</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Windows Echo DLL 介绍及命令</title>
     <link href="/blog/2020/06/13/win-cmd-echo-dll/"/>
     <url>/blog/2020/06/13/win-cmd-echo-dll/</url>
@@ -124,9 +151,9 @@
     
     <tags>
       
-      <tag>Hexo</tag>
-      
       <tag>Github</tag>
+      
+      <tag>Hexo</tag>
       
     </tags>
     
@@ -151,9 +178,9 @@
     
     <tags>
       
-      <tag>Hexo</tag>
-      
       <tag>Github</tag>
+      
+      <tag>Hexo</tag>
       
     </tags>
     
@@ -178,9 +205,9 @@
     
     <tags>
       
-      <tag>Github</tag>
-      
       <tag>Gitalk</tag>
+      
+      <tag>Github</tag>
       
     </tags>
     

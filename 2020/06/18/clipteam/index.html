@@ -17,7 +17,7 @@
   <meta name="description" content="谁知道这是哪里呢？">
   <meta name="author" content="Someone-Yang">
   <meta name="keywords" content="">
-  <title>Gitalk那些坑 - yang某人的博客</title>
+  <title>别针团队，前路漫漫 - yang某人的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -164,8 +164,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-06-07 10:34">
-      2020年6月7日 上午
+    <time datetime="2020-06-18 09:33">
+      2020年6月18日 上午
     </time>
   </div>
 
@@ -175,7 +175,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      763 字
+      863 字
     </span>
   
 
@@ -185,7 +185,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8
+      9
        分钟
     </span>
   
@@ -217,78 +217,19 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2020年6月16日 下午
+                  本文最后更新于：2020年6月18日 上午
                 
               </p>
             
             <article class="markdown-body">
-              <blockquote>
-<p>啊！它又出错了！</p>
+              <h1 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h1><p>在Scratch圈经常潜水的人肯定都知道去年火了老久的Clip CC 2.0。Clip CC是Clipteam（下文或称“别针团队”）制作的二次开发版Scratch，相比原版增加了许多实用功能，便于制作者发挥创意，让制作变得更加简单。<br>笔者曾经也用过Clip CC，这确实是个非常棒的Scratch编辑器。汉化优化更平易近人，各类新模块都使人眼前一亮。而且相较其他“杂类编辑器”（无特质），Clip CC还提供了网页版，可以说是非常完美了。<br>笔者进行随机访问后，数据显示：约90%的Scratcher了解Clip CC，其中40%的Scratcher用过Clip CC。<br>Clip CC 1发布可以追溯到2018年。当时Scratch在国内尚不流行，但Clip CC仍然获得了广泛的好评。2019年，国家教育部鼓励中小学生开展计算机教育，Scratch成为首选语言。Clip CC 2瞬间流行，甚至成为各地中小学计算机教育推荐使用的软件。至此，Clip CC 2“名扬四海”，也正是计算机教育的流行，帮助了Clip CC取得极大进步。<br>笔者通过<del>爬</del>查询Github，Clip CC 3工程最早可追溯至2019年上旬，这说明Clipteam是一直在默默地制作Clip CC 3，从中不难看出别针团队的无限努力。<br>然而到了2019年下旬，Clip CC突然没了音讯。笔者曾尝试访问别针官网、四处搜寻消息，皆以失败而归。codingclip域名备案于2020年上旬也突然过期，多数Scratcher对Clip CC 3的发布感到期待而不知何时可至。</p>
+<h1 id="转型"><a href="#转型" class="headerlink" title="转型"></a>转型</h1><p>其实，Clipteam并不是在“鸽”。别针团队多数成员在2019年下旬转战“版权维护”这个光荣的事业，成立“Scratch版权维护协会”（下文或称“版维”）。版权问题在我国Scratch社区中终于获得了重视，版维的积极行为得到了多数Scratcher的支持。但是，Clip CC 3的工程一直没了消息，仓库也没有消息。  </p>
+<h1 id="曙光"><a href="#曙光" class="headerlink" title="曙光"></a>曙光</h1><p>笔者在6月16日在Github上发现，Clip CC 3仓库又有了新消息（虽然是以“问题”为主）。不过，别针团队也及时交流，很显然别针团对还是很关注Clip CC 3的发展的。<br>Clip CC 1&amp;2一度获得好评，3在原版基础上又增加了许多新功能。对于广大Scratcher和信息技术教师来说，Clip CC一定是首选编辑器。<br>笔者在第三方新闻频道了解到，Clipteam可能将制作一个社区。消息如下：</p>
+<blockquote>
+<p>Clip CC制作团队Clipteam于今年3月18日增加新的Project，内容于“别针社区”相关，可能暗示了Clipteam将为众多开发者提供一个开发社区。</p>
 </blockquote>
-<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>前几天，我和<a href="https://sinangentoo.github.io/" target="_blank" rel="noopener">司南大佬</a>共同研究了一下近期流行的评论系统——Gitalk。<br>我们在进行设置时，都遇到了很多问题。那么我就在此为大家列举出来，让更少人踩坑~</p>
-<h1 id="设置参数"><a href="#设置参数" class="headerlink" title="设置参数"></a>设置参数</h1><h2 id="clientID"><a href="#clientID" class="headerlink" title="clientID"></a>clientID</h2><p><strong>官方解释：</strong>GitHub Application Client ID<br><strong>我的理解：</strong>Github应用接口ID<br><strong>要填什么：</strong>你申请的Github应用的接口ID<br><strong>填写示例：</strong><code>&#39;59a7c**********f0164&#39;</code>（要带引号！）<br><strong>坑：</strong></p>
-<ul>
-<li>别把应用ID当接口ID了</li>
-<li>要带引号</li>
-</ul>
-<h2 id="clientSecret"><a href="#clientSecret" class="headerlink" title="clientSecret"></a>clientSecret</h2><p><strong>官方解释：</strong>GitHub Application Client Secret<br><strong>我的理解：</strong>Github应用接口密钥<br><strong>要填什么：</strong>你申请的Github应用的接口对应的密钥<br><strong>填写示例：</strong><code>&#39;7ba8**********************c57814&#39;</code>（要带引号！）<br><strong>坑：</strong></p>
-<ul>
-<li>要带引号（这很重要XD）</li>
-</ul>
-<h2 id="repo"><a href="#repo" class="headerlink" title="repo"></a>repo</h2><p><strong>官方解释：</strong>The repo to store comments<br><strong>我的理解：</strong>存放评论的仓库<br><strong>要填什么：</strong>你用于存放评论的仓库名<br><strong>填写示例：</strong><code>&#39;SinanGentooBlogGitalk&#39;</code><br><strong>坑：</strong></p>
-<ul>
-<li>要带引号</li>
-<li>只需要填写仓库名，不能填写仓库路径</li>
-<li>要区分大小写<del>（可能）</del></li>
-</ul>
-<h2 id="owner"><a href="#owner" class="headerlink" title="owner"></a>owner</h2><p><strong>官方解释：</strong>GitHub repository owner<br><strong>我的理解：</strong>存放评论的仓库的所有者<br><strong>要填什么：</strong><del>请康理解</del><br><strong>填写示例：</strong><code>&#39;SinanGentoo&#39;</code><br><strong>坑：</strong></p>
-<ul>
-<li>要带引号</li>
-<li>只需要填写用户名/id，不能填写用户主页</li>
-<li>要区分大小写<del>（可能）</del></li>
-</ul>
-<h2 id="admin"><a href="#admin" class="headerlink" title="admin"></a>admin</h2><p><strong>官方解释：</strong>GitHub repo owner and collaborators<br><strong>我的理解：</strong>评论管理者<br><strong>要填什么：</strong>能管理评论的用户，用于开启评论<br><strong>填写示例：</strong><code>[&#39;CHRiceRice&#39;, &#39;Someone-Yang&#39;]</code><br><strong>坑：</strong></p>
-<ul>
-<li>要带引号和大括号</li>
-<li>大括号外不要引号</li>
-<li>各个管理者名称之间用英文逗号分隔</li>
-<li>只需要填写用户名/id，不能填写用户主页</li>
-<li>要区分大小写<del>（可能）</del></li>
-</ul>
-<h2 id="id"><a href="#id" class="headerlink" title="id"></a>id</h2><p><strong>官方解释：</strong>The unique id of the page<br><strong>我的理解：</strong>评论标签<br><strong>要填什么：</strong>一般来说，这里填写<code>location.pathname</code>就可以了。<br><strong>填写示例：</strong><code>&#39;mainpagetalk&#39;</code><br><strong>坑：</strong></p>
-<ul>
-<li>如果是自定义的id，要带引号</li>
-<li><strong>[重要]</strong>长度要小于50个字符</li>
-</ul>
-<h2 id="其他设置"><a href="#其他设置" class="headerlink" title="其他设置"></a>其他设置</h2><p>其他设置项都是可选的，具体请参见<a href="https://github.com/gitalk/gitalk" target="_blank" rel="noopener">Gitalk官方仓库</a>。</p>
-<h2 id="还有！"><a href="#还有！" class="headerlink" title="还有！"></a>还有！</h2><p>除最后一项外每个设置项末尾记得打逗号（众人：这是常识吧XD）</p>
-<h2 id="DAY网站的示例"><a href="#DAY网站的示例" class="headerlink" title="DAY网站的示例"></a>DAY网站的示例</h2><pre><code class="hljs less"><span class="hljs-selector-tag">new</span> <span class="hljs-selector-tag">Gitalk</span>(&#123;
-          <span class="hljs-attribute">clientID</span>: <span class="hljs-string">'59a7c*****f0164'</span>,
-          <span class="hljs-attribute">clientSecret</span>: <span class="hljs-string">'7ba8**********c57814'</span>,
-          <span class="hljs-attribute">repo</span>: <span class="hljs-string">'DAYdiscuss'</span>,
-          <span class="hljs-attribute">owner</span>: <span class="hljs-string">'Someone-Yang'</span>,
-          <span class="hljs-attribute">admin</span>: [<span class="hljs-string">'CHRiceRice'</span>, <span class="hljs-string">'Someone-Yang'</span>],
-          <span class="hljs-attribute">id</span>: location.pathname,
-          <span class="hljs-attribute">distractionFreeMode</span>: false
-        &#125;);</code></pre>
-
-<h1 id="各种错误"><a href="#各种错误" class="headerlink" title="各种错误"></a>各种错误</h1><h2 id="Error-Not-Found"><a href="#Error-Not-Found" class="headerlink" title="Error: Not Found"></a>Error: Not Found</h2><p><strong>问题:</strong>未找到指定资源（仓库）<br><strong>建议解决办法：</strong></p>
-<ul>
-<li>检查repo和owner设置，repo必须属于owner且可以访问“问题”。</li>
-<li>检查应用接口和密钥。</li>
-</ul>
-<h2 id="Error-Network-Error"><a href="#Error-Network-Error" class="headerlink" title="Error: Network Error"></a>Error: Network Error</h2><p><strong>问题:</strong>网络错误<br><strong>建议解决办法：</strong></p>
-<ul>
-<li>开发者调试看报的什么错。</li>
-<li>检查应用接口和密钥。</li>
-<li>如果被拒绝访问，可能是接口被频繁访问而锁定，等待片刻就自动恢复。</li>
-</ul>
-<h2 id="Error-Validation-Failed"><a href="#Error-Validation-Failed" class="headerlink" title="Error: Validation Failed"></a>Error: Validation Failed</h2><p><strong>问题:</strong>验证失败<br><strong>建议解决办法：</strong></p>
-<ul>
-<li>检查应用Callback。</li>
-<li>使用md5处理标签信息。标签不能大于50字符。</li>
-</ul>
-<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><p>其他问题应该不常见了<del>（没肝写了）</del>，请参考<a href="https://github.com/gitalk/gitalk/issues" target="_blank" rel="noopener">Gitalk Issues</a>。</p>
+<p>看到这个，心里的确非常激动。如果Clipteam拥有一个完善的社区和社区制度，那么我相信，别针社区一定会成为全国乃至全世界知名的Scratch社区。我一定会支持这个社区的发展。<br>至此，我衷心希望Clipteam能蓬勃发展，我也推荐您使用ClipCC。<br>I believe the clipteam will be well known around the world.<br>加油，Clipteam！<br>如果我获得了新消息，我将会及时撰写新博文。</p>
+<h1 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h1><p><a href="https://github.com/Clipteam" target="_blank" rel="noopener">Clipteam on Github</a><br><a href="https://gitee.com/clipteam" target="_blank" rel="noopener">Clipteam on Gitee</a><br>I strongly invite you to give them a star.<br>And what’s more, thanks for your reading.</p>
 
             </article>
             <hr>
@@ -298,7 +239,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/blog/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+                      <a class="hover-with-bg" href="/blog/categories/%E6%96%B0%E9%97%BB/">新闻</a>
                     
                   </div>
                 
@@ -306,9 +247,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/blog/tags/Gitalk/">Gitalk</a>
+                      <a class="hover-with-bg" href="/blog/tags/Clipteam/">Clipteam</a>
                     
-                      <a class="hover-with-bg" href="/blog/tags/Github/">Github</a>
+                      <a class="hover-with-bg" href="/blog/tags/%E8%AF%84%E8%AE%BA/">评论</a>
                     
                   </div>
                 
@@ -321,18 +262,12 @@
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/blog/2020/06/07/setuphexo1/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">从零开始搭建Hexo博客：准备</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </div>
                   <div class="post-next col-6">
                     
                     
-                      <a href="/blog/2020/06/07/HelloWorld/">
-                        <span class="hidden-mobile">HelloWorld</span>
+                      <a href="/blog/2020/06/13/win-cmd-echo-dll/">
+                        <span class="hidden-mobile">Windows Echo DLL 介绍及命令</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -503,7 +438,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Gitalk那些坑&nbsp;",
+        "别针团队，前路漫漫&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
